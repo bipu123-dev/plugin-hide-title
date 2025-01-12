@@ -29,6 +29,7 @@ export default {
             topicTitle.style.display = "none"; // 隐藏标题
           }
           const quotedTitle = document.querySelector(".quote .title>a");
+          console.log('topic-quoted-检查是否为空 ' + quotedTitle)
           if(/t-bot-\d{13,13}/.test(quotedTitle.innerText)){
             console.log('topic-quoted-插件匹配通过')
             quotedTitle.style.display = "none"; // 隐藏标题
