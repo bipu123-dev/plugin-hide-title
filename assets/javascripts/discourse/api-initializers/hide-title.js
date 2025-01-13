@@ -8,7 +8,7 @@ export default {
       api.decorateCookedElement(
           (cooked, helper) => {
             console.log("-----333---")
-            if (helper.controllerName === "topic") {
+            if (helper && helper.controllerName === "topic") {
               const title = cooked.querySelector(".quote .title>a");
               if (title && /t-bot-\d{13,13}/.test(title.innerText)) {
                 title.style.display = "none";
