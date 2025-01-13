@@ -7,7 +7,7 @@ export default {
     withPluginApi("0.8", (api) => {
       api.decorateCookedElement(
           (cooked, helper) => {
-            console.log("-----333---")
+            console.log("-----333---" + cooked)
             if (helper && helper.controllerName === "topic") {
               const title = cooked.querySelector(".quote .title>a");
               if (title && /t-bot-\d{13,13}/.test(title.innerText)) {
